@@ -34,6 +34,26 @@
 </nav>
 
 
+<div id="importedContent"></div>
+
+    <script>
+        // Function to load and render HTML content
+        function renderHTML(url, targetElementId) {
+            // Fetch HTML content
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    // Insert HTML content into the target element
+                    document.getElementById(targetElementId).innerHTML = html;
+                })
+                .catch(error => console.error('Error fetching HTML:', error));
+        }
+
+        // Call the function to render the content
+        renderHTML('interview_questions/string_array.html', 'importedContent');
+    </script>
+
+
 <div class="container">
   <h4>Arrays and  Strings</h4>
   <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>    
