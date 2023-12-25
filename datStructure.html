@@ -45,11 +45,12 @@
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="algorithm.html">Algorithm</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link active" href="datStructure.html">Data Structure</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="algorithm.html">Algorithm</a>
+          </li>
+          
           <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
@@ -60,8 +61,42 @@
 </div>
 
 <div class="container">
-  <h1>Data Structure</h1>
+  <h5>Data Structure</h5>
+  <div class="row">
+    <div class="col-4">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Array</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Linked List</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Trie</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Binary Search Tree</a>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+          <div id="array"></div>
+        </div>
+        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+          <div id="linked_list"></div>
+        </div>
+
+        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+          <div id="trie"></div>
+        </div>
+        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+          <div id="binary_search_tree"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
 </div>
+
+
+
 
 
 <footer>
@@ -92,12 +127,11 @@
         }
 
         // Call the function to render the content
-        renderHTML('interview_questions/string_array.html', 'string_array_container');
-        renderHTML('interview_questions/linked_list.html', 'linked_list');
-        renderHTML('interview_questions/stack_queue.html', 'stack_queue');
-        renderHTML('interview_questions/tree_graph.html', 'tree_graph');
-        renderHTML('interview_questions/bit_manipulation.html', 'bit_manipulation');
-        renderHTML('interview_questions/math_logic_puzzle.html', 'math_logic_puzzle');
+        renderHTML('data_structure/array.html', 'array');
+        renderHTML('data_structure/linked_list.html', 'linked_list');
+        renderHTML('data_structure/trie.html', 'trie');
+        renderHTML('data_structure/binary_search_tree.html', 'binary_search_tree');
+    
     </script>
 
 
