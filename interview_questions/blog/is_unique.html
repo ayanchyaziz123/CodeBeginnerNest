@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Characters in a String</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2, p, code {
+            margin-bottom: 20px;
+        }
+
+        code {
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Determine if a String has all Unique Characters</h1>
+
+    <h2>Problem Description:</h2>
+    <p>Given a string, determine if the string has all unique characters.</p>
+
+    <h2>Examples:</h2>
+    <code>Input: abcd10jk<br>Output: true</code>
+    <br>
+    <code>Input: hutg9mnd!nk9<br>Output: false</code>
+
+    <h2>Solution in Python:</h2>
+    <p>Here is a simple Python function to solve the problem:</p>
+
+    <code>
+        def has_unique_characters(s):
+            # Create an empty set to store unique characters
+            unique_chars = set()
+
+            # Iterate through the string
+            for char in s:
+                # If the character is already in the set, return False
+                if char in unique_chars:
+                    return False
+                # Otherwise, add the character to the set
+                else:
+                    unique_chars.add(char)
+
+            # If the loop completes, all characters are unique
+            return True
+    </code>
+
+    <h2>Usage:</h2>
+    <code>
+        result = has_unique_characters("abcd10jk")
+        print(result)  # Output: True
+
+        result = has_unique_characters("hutg9mnd!nk9")
+        print(result)  # Output: False
+    </code>
+
+    <p>Feel free to use this simple function to check if a string has all unique characters!</p>
+
+    <footer>
+        <p>Happy coding! 🚀</p>
+    </footer>
+</body>
+</html>
