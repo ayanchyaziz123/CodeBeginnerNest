@@ -58,7 +58,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../../aboutme.html">About-Me</a>
+                <a class="nav-link active" aria-current="page" href="../../index.html">About-Me</a>
               </li>
               
             </ul>
@@ -66,70 +66,49 @@
         </div>
       </nav>
     </div>
-      <div class="container">
-    <h1>Determine if a String has all Unique Characters</h1>
+    
+<div class="container">
+    <h1 class="mt-4 mb-4">About Me <i class="fa fa-user"></i></h1>
 
-    <h2>Problem Description:</h2>
-    <p>Given a string, determine if the string has all unique characters.</p>
+    <!-- Profile Section -->
+    <div class="row">
+        <div class="col-md-4">
+            
+        </div>
+        <div class="col-md-8">
+            <p>
+                Hello! I'm [Your Name], a passionate [Your Profession] based in [Your Location]. I love exploring
+                new technologies and solving interesting problems. This is my space to share my experiences and
+                insights with the world.
+            </p>
+        </div>
+    </div>
 
-    <h2>Examples:</h2>
-    <pre><code class="language-python">Input: abcd10jk
-Output: true</code></pre>
-    <pre><code class="language-python">Input: hutg9mnd!nk9
-Output: false</code></pre>
+    <!-- Education Section -->
+    <div class="section-header">
+        <h2>Education <i class="fa fa-graduation-cap"></i></h2>
+    </div>
+    <p><strong>[Degree] in [Field of Study]</strong></p>
+    <p>[University Name], [Location] | [Graduation Year]</p>
 
-    <h2>Solution in Python:</h2>
-    <p>Here is a simple Python function to solve the problem:</p>
+    <!-- Skills Section -->
+    <div class="section-header">
+        <h2>Skills <i class="fa fa-cogs"></i></h2>
+    </div>
+    <ul>
+        <li>Web Development</li>
+        <li>Programming Languages: [Your Skills]</li>
+        <li>[Any other skills]</li>
+    </ul>
 
-    <pre><code class="language-python">
-def has_unique_characters(s):
-    # Create an empty set to store unique characters
-    unique_chars = set()
+    <!-- Contact Section -->
+    <div class="section-header">
+        <h2>Contact Information <i class="fa fa-envelope"></i></h2>
+    </div>
+    <p>Email: [Your Email]</p>
+    <p>LinkedIn: <a href="[Your LinkedIn Profile]" target="_blank"><i class="fa fa-linkedin"></i> [Your LinkedIn Profile]</a></p>
+    <p>GitHub: <a href="[Your GitHub Profile]" target="_blank"><i class="fa fa-github"></i> [Your GitHub Profile]</a></p>
 
-    # Iterate through the string
-    for char in s:
-        # If the character is already in the set, return False
-        if char in unique_chars:
-            return False
-        # Otherwise, add the character to the set
-        else:
-            unique_chars.add(char)
-
-    # If the loop completes, all characters are unique
-    return True
-    </code></pre>
-
-    <pre><code class="language-java">
-      static int plusMethodInt(int x, int y) {
-        return x + y;
-      }
-      
-      static double plusMethodDouble(double x, double y) {
-        return x + y;
-      }
-      
-      public static void main(String[] args) {
-        int myNum1 = plusMethodInt(8, 5);
-        double myNum2 = plusMethodDouble(4.3, 6.26);
-        System.out.println("int: " + myNum1);
-        System.out.println("double: " + myNum2);
-      }
-          </code></pre>
-
-    <h2>Usage:</h2>
-    <pre><code class="language-python">
-result = has_unique_characters("abcd10jk")
-print(result)  # Output: True
-
-result = has_unique_characters("hutg9mnd!nk9")
-print(result)  # Output: False
-    </code></pre>
-
-    <p>Feel free to use this simple function to check if a string has all unique characters!</p>
-
-    <footer>
-        <p>Happy coding! 🚀</p>
-    </footer>
 </div>
 </body>
 </html>
