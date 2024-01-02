@@ -65,50 +65,78 @@
             </div>
           </nav>
         </div>
-
-<div class="container">
-    <h1 class="mt-4 mb-4">About Me <i class="fa fa-user"></i></h1>
-
-    <!-- Profile Section -->
-    <div class="row">
-        <div class="col-md-4">
-            <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
-        </div>
-        <div class="col-md-8">
+        <div class="container">
+            <h1 class="mt-4 mb-4">Checking Permutation: A Python and Java Solution</h1>
+        
             <p>
-                Hello! I'm [Your Name], a passionate [Your Profession] based in [Your Location]. I love exploring
-                new technologies and solving interesting problems. This is my space to share my experiences and
-                insights with the world.
+                Permutations of a string are other strings that contain the same characters, but the order of characters
+                can be different. For example, "abcd" and "dabc" are permutations of each other. In this blog post, we will
+                discuss how to check whether two given strings are permutations of each other.
+            </p>
+        
+            <h2>Python Implementation</h2>
+            <div class="code-container">
+                <h4>Python Code:</h4>
+                <pre><code class="language-python">
+        def are_permutations(str1, str2):
+            # Check if lengths are different
+            if len(str1) != len(str2):
+                return False
+        
+            # Sort both strings and compare
+            return sorted(str1) == sorted(str2)
+        
+        # Example usage
+        string1 = "abcd"
+        string2 = "dabc"
+        result = are_permutations(string1, string2)
+        print(result)  # Output: True
+                </code></pre>
+            </div>
+        
+            <h2>Java Implementation</h2>
+            <div class="code-container">
+                <h4>Java Code:</h4>
+                <pre><code class="language-java">
+        import java.util.Arrays;
+        
+        public class PermutationChecker {
+            public static boolean arePermutations(String str1, String str2) {
+                // Check if lengths are different
+                if (str1.length() != str2.length()) {
+                    return false;
+                }
+        
+                // Convert strings to character arrays, sort, and compare
+                char[] charArray1 = str1.toCharArray();
+                char[] charArray2 = str2.toCharArray();
+                Arrays.sort(charArray1);
+                Arrays.sort(charArray2);
+        
+                return Arrays.equals(charArray1, charArray2);
+            }
+        
+            public static void main(String[] args) {
+                String string1 = "abcd";
+                String string2 = "dabc";
+                boolean result = arePermutations(string1, string2);
+                System.out.println(result); // Output: true
+            }
+        }
+                </code></pre>
+            </div>
+        
+            <p>
+                In both implementations, we first check if the lengths of the strings are different. If the lengths are
+                different, the strings cannot be permutations. Then, we sort the characters in both strings and compare
+                them. If the sorted character arrays are equal, the strings are permutations of each other.
+            </p>
+        
+            <p>
+                Feel free to use these code snippets to check whether two given strings are permutations of each other in
+                your Python or Java projects!
             </p>
         </div>
-    </div>
-
-    <!-- Education Section -->
-    <div class="section-header">
-        <h2>Education <i class="fa fa-graduation-cap"></i></h2>
-    </div>
-    <p><strong>[Degree] in [Field of Study]</strong></p>
-    <p>[University Name], [Location] | [Graduation Year]</p>
-
-    <!-- Skills Section -->
-    <div class="section-header">
-        <h2>Skills <i class="fa fa-cogs"></i></h2>
-    </div>
-    <ul>
-        <li>Web Development</li>
-        <li>Programming Languages: [Your Skills]</li>
-        <li>[Any other skills]</li>
-    </ul>
-
-    <!-- Contact Section -->
-    <div class="section-header">
-        <h2>Contact Information <i class="fa fa-envelope"></i></h2>
-    </div>
-    <p>Email: [Your Email]</p>
-    <p>LinkedIn: <a href="[Your LinkedIn Profile]" target="_blank"><i class="fa fa-linkedin"></i> [Your LinkedIn Profile]</a></p>
-    <p>GitHub: <a href="[Your GitHub Profile]" target="_blank"><i class="fa fa-github"></i> [Your GitHub Profile]</a></p>
-
-</div>
 
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
