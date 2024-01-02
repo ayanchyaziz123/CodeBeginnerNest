@@ -1,94 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linked List Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Arial', sans-serif;
+            padding: 20px;
         }
 
-        h1 {
-            color: #333;
+        .linked-list-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        p {
-            color: #666;
+        .node {
+            box-sizing: border-box;
+            width: 120px;
+            height: 80px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            background-color: #fff;
         }
 
-        code {
-            font-family: 'Courier New', monospace;
-            background-color: #f2f2f2;
-            padding: 5px;
-            border-radius: 3px;
+        .arrow {
+            width: 30px;
+            height: 2px;
+            background-color: #333;
+        }
+
+        .address {
+            margin-top: 5px;
+            text-align: center;
+            color: #888;
+        }
+
+        .operations {
+            margin-top: 20px;
+        }
+
+        .operation-card {
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
-
 <body>
 
-    <h1>Understanding Linked Lists</h1>
+<div class="container">
+    <h2>Linked List Visualization with Descriptions and Time Complexity</h2>
 
-    <p>Welcome to our blog post on linked lists! Linked lists are fundamental data structures in computer science
-        and play a crucial role in many algorithms and applications. Let's dive into the basics.</p>
+    <div class="linked-list-container">
+        <div class="node">
+            <div>1</div>
+            <div class="next">Next: 0x23</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="node">
+            <div>2</div>
+            <div class="next">Next: 0x345</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="node">
+            <div>3</div>
+            <div class="next">Next: 0x456</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="node">
+            <div>4</div>
+            <div class="next">Next: 0x5678</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="node">
+            <div>5</div>
+            <div class="next">Next: NULL</div>
+        </div>
+    </div>
 
-    <h2>What is a Linked List?</h2>
+    <div class="operations">
+        <h3>Linked List Operations</h3>
 
-    <p>A linked list is a linear data structure where elements are stored in nodes, and each node points to the
-        next node in the sequence. Unlike arrays, linked lists do not have a fixed size and can dynamically grow or
-        shrink during program execution.</p>
+        <div class="operation-card">
+            <h4>Insertion</h4>
+            <p>Description: Inserting a new node at a specific position in the linked list.</p>
+            <p>Time Complexity: O(1) - Constant time, if insertion is at the beginning or with a reference to the node.</p>
+            <pre><code class="language-python">
+def insert_node(value, position):
+    # Implementation code for insertion
+    pass
+</code></pre>
+        </div>
 
-    <h2>Components of a Linked List</h2>
+        <div class="operation-card">
+            <h4>Deletion</h4>
+            <p>Description: Removing a node from a specific position in the linked list.</p>
+            <p>Time Complexity: O(1) - Constant time, if deletion is at the beginning or with a reference to the node.</p>
+            <pre><code class="language-python">
+def delete_node(position):
+    # Implementation code for deletion
+    pass
+</code></pre>
+        </div>
 
-    <p>A node in a linked list typically contains two components:</p>
+        <div class="operation-card">
+            <h4>Update</h4>
+            <p>Description: Modifying the value of a node at a specific position in the linked list.</p>
+            <p>Time Complexity: O(1) - Constant time, as direct access to the node is possible.</p>
+            <pre><code class="language-python">
+def update_node(position, new_value):
+    # Implementation code for updating
+    pass
+</code></pre>
+        </div>
+    </div>
+</div>
 
-    <ul>
-        <li><b>Data:</b> The actual information stored in the node.</li>
-        <li><b>Next Pointer:</b> A reference (pointer) to the next node in the sequence.</li>
-    </ul>
-
-    <h2>Types of Linked Lists</h2>
-
-    <p>There are various types of linked lists, including:</p>
-
-    <ul>
-        <li><b>Singly Linked List:</b> Each node points to the next node in the sequence.</li>
-        <li><b>Doubly Linked List:</b> Each node points to both the next and the previous nodes.</li>
-        <li><b>Circular Linked List:</b> The last node points back to the first node, forming a circle.</li>
-    </ul>
-
-    <h2>Operations on Linked Lists</h2>
-
-    <p>Common operations on linked lists include:</p>
-
-    <ul>
-        <li><b>Insertion:</b> Adding a new node to the list.</li>
-        <li><b>Deletion:</b> Removing a node from the list.</li>
-        <li><b>Traversal:</b> Visiting each node in the list.</li>
-    </ul>
-
-    <h2>Code Example</h2>
-
-    <p>Let's take a simple example of a singly linked list in Python:</p>
-
-    <code>
-        class Node:
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, data=None):
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.data = data
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.next = None
-
-        class LinkedList:
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self):
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.head = None
-    </code>
-
-    <p>This is just a basic introduction to linked lists. Stay tuned for more in-depth articles on different types
-        of linked lists and advanced operations!</p>
-
-    <p>Happy coding!</p>
-
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
