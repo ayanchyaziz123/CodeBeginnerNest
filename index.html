@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CodeBeginnerNest</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col text-center mb-2">
+      <img src="media/dp.jpeg" width="140" height="160" style="border-radius: 40%"/>
+    </div>
+
+    <div class="col-md-10">
+      <h3>Rahman, Aziz-Ayan || 200 Coding Interview Questions and Answer</h3>
+      <p>Explore detailed, step-by-step solutions to each interview question, accompanied by explanations and best practices. Understand the thought process
+         behind solving problems to boost your problem-solving skills.</p>
+      <p class="mb-0">Built by Azizur Rahman Ayan. Student at City University of New York</p>
+      <span><a  href="https://www.linkedin.com/in/azizur-rahman-720636165/" target="_blank"><i class="fa fa-linkedin-square display-6" aria-hidden="true"></i></a>
+      </span>
+      <span><a class="text-dark" href="https://github.com/ayanchyaziz123" target="_blank"><i class="fa fa-github-square display-6" aria-hidden="true"></i></a>
+      </span>
+      <span><a class="text-info" href="https://ayanchyaziz123.github.io/Azizur-Rahman/" target="_blank"><i class="fa fa-address-card display-6" aria-hidden="true"></i></a>
+      </span>
+    </div>
+  
+  </div>
+</div>
+
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Rahman-Aziz-Ayan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="aboutme.html">About-Me</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</div>
+
+<div id="string_array_container"></div>
+<div id="linked_list"></div>
+<div id="stack_queue"></div>
+<div id="tree_graph"></div>
+<div id="bit_manipulation"></div>
+<div id="math_logic_puzzle"></div>
+<div id="recursion_dynamic_programming"></div>
+<div class="container text-center mt-3 mb-3 bg-dark p-2">
+  <img class="img-fluid" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*dWet_YU-5072Kcko7LzsuQ.jpeg"/>
+</div>
+
+
+<footer>
+  <div class="container">
+    <div class="jumbotron bg-dark text-light p-3">
+        <h1 class="display-4">Welcome to Our Website!</h1>
+        <p class="lead">This is a simple example of a Bootstrap Jumbotron.</p>
+        <hr class="my-4">
+        <p>It provides a lightweight container to showcase key content on your webpage.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+</div>
+
+  </div>
+</footer>
+
+    <script>
+        // Function to load and render HTML content
+        function renderHTML(url, targetElementId) {
+            // Fetch HTML content
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    // Insert HTML content into the target element
+                    document.getElementById(targetElementId).innerHTML = html;
+                })
+                .catch(error => console.error('Error fetching HTML:', error));
+        }
+
+        // Call the function to render the content
+        renderHTML('components/string_array.html', 'string_array_container');
+        renderHTML('components/linked_list.html', 'linked_list');
+        renderHTML('components/stack_queue.html', 'stack_queue');
+        renderHTML('components/tree_graph.html', 'tree_graph');
+        renderHTML('components/bit_manipulation.html', 'bit_manipulation');
+        renderHTML('components/math_logic_puzzle.html', 'math_logic_puzzle');
+        renderHTML('components/recursion_dynamic_programming.html', 'recursion_dynamic_programming');
+    </script>
+
+
+</body>
+</html>

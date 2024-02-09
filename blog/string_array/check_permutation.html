@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+
+        .profile-picture {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .section-header {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-3">
+        <div class="row">
+          <div class="col text-center mb-2">
+            <img src="../../media/dp.jpeg" width="140" height="160" style="border-radius: 40%"/>
+          </div>
+      
+          <div class="col-md-10">
+            <h3>Rahman, Aziz-Ayan || 200 Coding Interview Questions and Answer</h3>
+            <p>Explore detailed, step-by-step solutions to each interview question, accompanied by explanations and best practices. Understand the thought process
+               behind solving problems to boost your problem-solving skills.</p>
+            <p class="mb-0">Built by Azizur Rahman Ayan. Student at City University of New York</p>
+            <span><a  href="https://www.linkedin.com/in/azizur-rahman-720636165/" target="_blank"><i class="fa fa-linkedin-square display-6" aria-hidden="true"></i></a>
+            </span>
+            <span><a class="text-dark" href="https://github.com/ayanchyaziz123" target="_blank"><i class="fa fa-github-square display-6" aria-hidden="true"></i></a>
+            </span>
+            <span><a class="text-info" href="https://ayanchyaziz123.github.io/Azizur-Rahman/" target="_blank"><i class="fa fa-address-card display-6" aria-hidden="true"></i></a>
+            </span>
+          </div>
+        
+        </div>
+      </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../../index.html">Rahman-Aziz-Ayan</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../../aboutme.html">About-Me</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="container">
+            <h1 class="mt-4 mb-4">Checking Permutation: A Python and Java Solution</h1>
+        
+            <p>
+                Permutations of a string are other strings that contain the same characters, but the order of characters
+                can be different. For example, "abcd" and "dabc" are permutations of each other. In this blog post, we will
+                discuss how to check whether two given strings are permutations of each other.
+            </p>
+        
+            <h2>Python Implementation</h2>
+            <div class="code-container">
+                <h4>Python Code:</h4>
+                <pre><code class="language-python">
+        def are_permutations(str1, str2):
+            # Check if lengths are different
+            if len(str1) != len(str2):
+                return False
+        
+            # Sort both strings and compare
+            return sorted(str1) == sorted(str2)
+        
+        # Example usage
+        string1 = "abcd"
+        string2 = "dabc"
+        result = are_permutations(string1, string2)
+        print(result)  # Output: True
+                </code></pre>
+            </div>
+        
+            <h2>Java Implementation</h2>
+            <div class="code-container">
+                <h4>Java Code:</h4>
+                <pre><code class="language-java">
+        import java.util.Arrays;
+        
+        public class PermutationChecker {
+            public static boolean arePermutations(String str1, String str2) {
+                // Check if lengths are different
+                if (str1.length() != str2.length()) {
+                    return false;
+                }
+        
+                // Convert strings to character arrays, sort, and compare
+                char[] charArray1 = str1.toCharArray();
+                char[] charArray2 = str2.toCharArray();
+                Arrays.sort(charArray1);
+                Arrays.sort(charArray2);
+        
+                return Arrays.equals(charArray1, charArray2);
+            }
+        
+            public static void main(String[] args) {
+                String string1 = "abcd";
+                String string2 = "dabc";
+                boolean result = arePermutations(string1, string2);
+                System.out.println(result); // Output: true
+            }
+        }
+                </code></pre>
+            </div>
+        
+            <p>
+                In both implementations, we first check if the lengths of the strings are different. If the lengths are
+                different, the strings cannot be permutations. Then, we sort the characters in both strings and compare
+                them. If the sorted character arrays are equal, the strings are permutations of each other.
+            </p>
+        
+            <p>
+                Feel free to use these code snippets to check whether two given strings are permutations of each other in
+                your Python or Java projects!
+            </p>
+        </div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
